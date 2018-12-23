@@ -1,21 +1,38 @@
-.col {
+body,
+html {
+  height: calc(100% - 28px);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.content .cols {
+  display: flex;
+  height: 100%;
+}
+.content .cols .col {
   min-height: 100%;
   padding: 20px 0;
+  flex: 1 0 auto;
+  flex-wrap: wrap;
 }
-.col:first-child,
-.col:last-child {
+.content .cols .col:first-child,
+.content .cols .col:last-child {
   font-size: 14px;
   line-height: 24px;
 }
-.col:nth-child(2) h1 {
+.content .cols .col:nth-child(2) h1 {
   margin-bottom: 20px;
 }
-.col:nth-child(2) p {
+.content .cols .col:nth-child(2) p {
   line-height: 28px;
 }
 .footer {
-  position: sticky;
-  bottom: 0;
+  flex: 0 0 auto;
   width: 100%;
   height: 60px;
   line-height: 60px;
